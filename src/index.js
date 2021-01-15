@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Game from './Game'
-import Board from './Board'
+// import Board from './Board'
 import './index.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
