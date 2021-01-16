@@ -1,5 +1,6 @@
 
-
+// Utility.js has a function used in several file
+// In the last line, export it
 
 function calculateWinner(squares) {
     const lines = [

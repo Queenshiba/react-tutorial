@@ -1,25 +1,23 @@
 import React, { Component } from 'react'
-
 import Board from './Board'
-// import Square from './Square';
 import { Square } from "./Square";
 import { calculateWinner } from "./Utility";
-
+// with {}, import the specific functions
 
 class Game extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          history: [{
-            squares: Array(9).fill(null),
-          }],
-          stepNumber: 0,
-          xIsNext: true,
+            history: [{
+                squares: Array(9).fill(null),
+            }],
+            stepNumber: 0,
+            xIsNext: true,
         };
-      }
+    }
 
-      handleClick(i) {
-
+    handleClick(i) {
+//
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[history.length - 1];
 
@@ -39,10 +37,10 @@ class Game extends React.Component {
 
     jumpTo(step) {
         this.setState({
-          stepNumber: step,
-          xIsNext: (step % 2) === 0
+            stepNumber: step,
+            xIsNext: (step % 2) === 0
         });
-      }
+    }
 
 
     renderSquare(i) {
