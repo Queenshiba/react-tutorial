@@ -34,6 +34,7 @@ class Board extends React.Component {
       }
 }
 
-
+// This Board component has full control over controlled components 
+// such as Square components in React terms
 
 export default Board
