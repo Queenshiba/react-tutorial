@@ -10,6 +10,8 @@ class Game extends React.Component {
         this.state = {
             history: [{
                 squares: Array(9).fill(null),
+                // using slice() to create a new copy of the squares array and treated it as it immutable
+                // that allows us to store every past version of the squares array 
             }],
             stepNumber: 0,
             xIsNext: true,
@@ -54,7 +56,7 @@ class Game extends React.Component {
     render() {
         const history = this.state.history;
         const current = history[this.state.stepNumber];
-
+// check if a player has won with calculateWinner function
         const winner = calculateWinner(current.squares);
 
         const moves = history.map((step, move) => {
