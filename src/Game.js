@@ -19,7 +19,6 @@ class Game extends React.Component {
     }
 
     handleClick(i) {
-//
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[history.length - 1];
 
@@ -30,6 +29,8 @@ class Game extends React.Component {
         squares[i] = this.state.xIsNext ? 'X' : 'O';
         this.setState({
             history: history.concat([{
+                // using the concat() method here not the array push method
+                // because it doesn't mutate the original array 
                 squares: squares,
             }]),
             stepNumber: history.length,
